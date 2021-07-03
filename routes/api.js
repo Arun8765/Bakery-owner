@@ -17,13 +17,24 @@ Bakery.find({})
 router.get('/orders',(req,res)=>{
   NewOrder.find({status:"ordered"})
     .then((data)=>{
-      console.log(`Data:`,data);
+      // console.log(`Data:`,data);
       res.json(data);
     })
     .catch((error)=>{
       console.log(`error:`,error);
     });
   });
+
+  router.get('/outForDel',(req,res)=>{
+    NewOrder.find({status:"out_for_delivery"})
+      .then((data)=>{
+        // console.log(`Data:`,data);
+        res.json(data);
+      })
+      .catch((error)=>{
+        console.log(`error:`,error);
+      });
+    });
 
 router.post('/deleteProduct',(req,res)=>{
   console.log(`The delete request was recieved for id: `,req.body.ind)
@@ -39,6 +50,23 @@ router.post('/editProd',(req,res)=>{
   const data=req.body;
   console.log(data.name);
   Bakery.updateOne({_id:data.index},{name:data.name,price:data.price,imageurl: data.imageurl },(err,docs)=>{
+    if(err){
+      console.log(err);
+    }
+    else{
+      console.log("Updated Docs: ",docs);
+    }
+  })
+});
+
+// Update the status
+router.post('/changeStat',(req,res)=>{
+ 
+  const data=req.body;
+  console.log("Req.body:",data);
+  // console.log("Datalog from change Stat: ",data);
+
+  NewOrder.updateOne({_id:data.id},{status: data.status },(err,docs)=>{
     if(err){
       console.log(err);
     }
