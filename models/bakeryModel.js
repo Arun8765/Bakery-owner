@@ -19,7 +19,7 @@ const NewOrderSchema= new Schema({
   }]
 });
 //Model
-const Bakery = mongoose.model('bakery',BakerySchema);
+const Bakery = mongoose.model('bakeries',BakerySchema);
 const NewOrder= mongoose.model('new_order',NewOrderSchema);
 
 module.exports = { Bakery, NewOrder};

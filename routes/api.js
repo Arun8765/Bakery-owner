@@ -94,15 +94,7 @@ router.post('/save',(req,res)=>{
   //       price: 300
   //     }]
   //   })
-
-  //   newOrder.save((error)=>{
-  //     if (error){
-  //         res.status(500).json({msg: 'Sorry internal server errors'});
-  //     return;
-  //     }
-  //     return  res.json({msg:"The data was recieved"});
-  // })
-
+  
     newBakery.save((error)=>{
         if (error){
             res.status(500).json({msg: 'Sorry internal server errors'});
