@@ -15,9 +15,17 @@
     "axios": "^0.21.1",
     "concurrently": "^6.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.13.0",
+    "mongoose": "^5.13.2",
     "morgan": "^1.10.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "This runs both the server at port 8080 (The initialized one), Mongoose and React app\r This is the end of bakery owner",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kraken676/Bakery-owner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kraken676/Bakery-owner/issues"
+  },
+  "homepage": "https://github.com/Kraken676/Bakery-owner#readme"
 }

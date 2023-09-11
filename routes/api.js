@@ -105,13 +105,13 @@ router.post('/save',(req,res)=>{
     
 });
 
-  router.get('/another' ,(req,res)=>{
-    const data= {
-      name: "Ashik",
-      age: 20
-    };
-    res.json (data)
-  });
+  // router.get('/another' ,(req,res)=>{
+  //   const data= {
+  //     name: "Ashik",
+  //     age: 20
+  //   };
+  //   res.json (data)
+  // });
 
 module.exports= router;
 
